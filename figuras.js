@@ -83,7 +83,7 @@ console.groupEnd();
 // Aquí interactuamos con el HTML
 
 function calcularPerimetroCuadrado(){
-    const input = document.getElementById("InputCuadrado");
+    const input = document.getElementById("InputLadoCuadrado");
     const value = input.value;
 
     const perimetro = perimetroCuadrado(value);
@@ -91,9 +91,59 @@ function calcularPerimetroCuadrado(){
 }
 
 function calcularAreaCuadrado(){
-    const input = document.getElementById("InputCuadrado");
+    const input = document.getElementById("InputLadoCuadrado");
     const value = input.value;
 
     const area = areaCuadrado(value);
+    alert(area);
+}
+
+
+function calcularPerimetroTriangulo(){
+    const input1 = document.getElementById("InputBaseTriangulo");
+    const value1 = parseInt(input1.value);
+
+    const input2 = document.getElementById("InputAlturaTriangulo");
+    const value2 = parseInt(input2.value);
+
+    const input3 = document.getElementById("InputHipotenusaTriangulo");
+    const value3 = parseInt(input3.value);
+
+    const perimetro = perimetroTriangulo(value1, value2, value3);
+    alert(perimetro);
+}
+
+function calcularAreaTriangulo(){
+    const input1 = document.getElementById("InputBaseTriangulo");
+    const value1 = input1.value;
+
+    const input2 = document.getElementById("InputAlturaTriangulo");
+    const value2 = input2.value;
+
+    const area = areaTriangulo(value1,value2);
+    alert(area);
+}
+
+function calcularDiametroCirculo(){
+    const input = document.getElementById("InputRadioCirculo");
+    const value = input.value;
+
+    const diametro = diametroCirculo(value);
+    alert(diametro);
+}
+
+function calcularPerimetroCirculo(){
+    const input = document.getElementById("InputRadioCirculo");
+    const value = input.value;
+
+    const circunferencia = perimetroCirculo(value);
+    alert(circunferencia);
+}
+
+function calcularAreaCirculo(){
+    const input = document.getElementById("InputRadioCirculo");
+    const value = input.value;
+
+    const area = areaCirculo(value);
     alert(area);
 }
